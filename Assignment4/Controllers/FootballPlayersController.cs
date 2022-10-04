@@ -24,7 +24,7 @@ namespace Assignment4.Controllers
             public ActionResult<FootballPlayer> Get(int id)
             {
                 FootballPlayer player = _manager.GetById(id);
-            if (player == null) return NotFound("No such player, id: " + player.Id);
+            if (player == null) return NotFound("No such player, id: " + id);
                 return Ok(player);
             }
 
